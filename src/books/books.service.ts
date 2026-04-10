@@ -13,11 +13,11 @@ export class BooksService {
         private booksRepository: Repository<BooksEntity>
     ) {}
 
-    getAllBooks() {
+    async getAllBooks() {
         return this.booksRepository.find();
     }
 
-    getBookById(id: string) {
+    async getBookById(id: string) {
         return this.booksRepository.findOne({ where: { id } });
     }
 
